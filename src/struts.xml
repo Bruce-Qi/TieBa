@@ -20,10 +20,14 @@
 				<param name="actionName">topicAction_findAll</param>
 			</result>
 			<result name="findById">/pages/showTopic.jsp</result>
-			
 		</action>
+		<!-- 回复 -->
+		<action name="replyAction_*"  class="cn.tf.action.ReplyAction"  method="{1}">
+			<result name="add"   type="redirectAction">
+				topicAction_findById?id=${topic.id}
+			</result>
 		
-		
+		</action>
 		
 		
 		

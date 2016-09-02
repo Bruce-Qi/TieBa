@@ -10,7 +10,7 @@ public class TopicDaoImpl implements TopicDao{
 
 	@Override
 	public List<Topic> findAll() {
-		return H3Utils.getCurrentSession().createQuery("from Topic  order by replyTime desc").list();
+		return H3Utils.getCurrentSession().createQuery("from Topic  order by replayTime desc").list();
 	}
 
 	@Override

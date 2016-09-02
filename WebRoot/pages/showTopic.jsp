@@ -3,14 +3,14 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 <html>
 <head>
-    <title>凤姐专区</title>
+    <title>指令汇科技贴吧</title>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css"> 
 </head>
 <body>
 	
 	<!-- 菜单 -->
 	<div class="menubar">
-		<a href="listTopics.html">主题列表</a>
+		<a href="TieBa/topicAction_findAll">主题列表</a>
 	</div>
 	
 	<!-- 当前主题贴数 -->
@@ -46,7 +46,7 @@
         </tr>
         <tr class="content">
             <td></td>
-            <td><pre><s:property value="#reply.replyContent"/> </pre></td>
+            <td><pre><s:property value="#reply.replayContent"/> </pre></td>
         </tr>
         <tr class="info">
             <td></td>
@@ -61,17 +61,19 @@
     
     <div style="margin-bottom: 20px"></div>
 	<!-- 发表回复表单 -->
-	<form action="" class="addNewTopicForm">
+	<s:form action="replyAction_add" cssClass="addNewTopicForm">
+		<%--确定当前主题 --%>
+		<s:hidden name="topic.id" value="%{#ftopic.id}"></s:hidden>
 		<table class="publishArticleForm">
 	        <tr>
 	            <td class="label">内　容:</td>
-	            <td><textarea name="content" class="content"></textarea></td>
+	            <td><s:textarea name="replayContent" cssClass="content"></s:textarea></td>
 	        </tr>
 	        <tr>
 	            <td></td>
-	            <td><input type="submit" value="回　贴"/></td>
+	            <td><s:submit value="回　贴"></s:submit></td>
 	        </tr>
 	    </table>
-	</form>
+	</s:form>
 </body>
 </html>

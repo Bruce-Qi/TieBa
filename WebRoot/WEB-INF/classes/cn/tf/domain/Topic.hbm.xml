@@ -5,7 +5,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping  package="cn.tf.domain">
-	<class  name="Topic"  table="t_reply"  >
+	<class  name="Topic"  table="t_topic"  >
 		<id name="id"  >
 			<generator class="native"></generator>
 		</id>
