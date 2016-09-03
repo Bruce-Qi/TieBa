@@ -17,6 +17,7 @@ import com.opensymphony.xwork2.ModelDriven;
 public class ReplyAction   extends ActionSupport implements ModelDriven<Reply>{
 	
 	private Reply  reply=new Reply();
+	private Topic topic=new Topic();
 	private BusinessService businessService = new BusinessServiceImpl();
 	
 	
@@ -36,6 +37,7 @@ public class ReplyAction   extends ActionSupport implements ModelDriven<Reply>{
 		
 		//操作
 		businessService.addReply(reply);
+		
 
 		return "add";
 	}

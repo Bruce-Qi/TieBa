@@ -10,5 +10,4 @@ public class ReplyDaoImpl  implements ReplyDao {
 	public void save(Reply reply) {
 		H3Utils.getCurrentSession().save(reply);
 	}
-
 }

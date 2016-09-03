@@ -11,7 +11,7 @@
 		</id>
 		<property name="title" length="120"></property>
 		<property name="ipAddr" length="15"></property>
-		<property name="replayTime" type="timestamp"></property>
+		<property name="replayTime" type="timestamp"></property> 
 		<property name="topicContent" length="500"></property>
 		<property name="createDate" >
 			<column name="createDate" sql-type="datetime"></column>
@@ -24,12 +24,7 @@
 			</key>
 			<one-to-many class="Reply"/>
 		</set>
-		
-	
 	</class>
-	
-	
-	
 	
 </hibernate-mapping>
 

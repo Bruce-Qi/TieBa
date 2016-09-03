@@ -7,5 +7,4 @@ public interface ReplyDao {
 	//添加回复
 	public void save(Reply reply);
 
-
 }

@@ -39,11 +39,10 @@
 		            <td class="info"><s:date name="replayTime"/></td>
 		        </tr>
     		</s:iterator>
-	       
-
-		    <tr>
-		        <td colspan="5" class="num">共有主题数<font color="red">2</font>个</td>
+    		<tr>
+		        <td colspan="5" class="num">共有主题数<font color="red"><s:property value="findAllTopic.size()"/> </font>个</td>
 		    </tr>
+    		
    		 </tbody>
 	</table>
 
